@@ -41,7 +41,7 @@ public class Main {
 
 		List<Animal> animals1 = animalService.getAllAnimals();
 
-		System.out.println("printing out the animals after filtering using BiConsumer");
+		System.out.println("printing out the animals after filtering using BiConsumer, names beginning with j");
 		AnimalUtilities.filter(animals1, (String name) -> name.startsWith("j"), (Integer number, Animal animal) -> {
 			System.out.println(number + " " + animal);
 		});
