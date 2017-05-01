@@ -81,7 +81,7 @@ public class AnimalRepositoryImpl implements AnimalRepository {
 	@Override
 	public void sendToServer(List<Animal> swimmers, Order order) {
 		 RestTemplate restTemplate = new RestTemplate();
-	        String url = "http://localhost:8080/FinalAssigment/swimmers/{order}";
+	        String url = "http://localhost:8080/FinalAssigmentSpringServer/swimmers/{order}";
 	        Map<String,String> map=new HashMap<>();
 	        map.put("order", order.toString());
 	        restTemplate.put(url, swimmers,map);
