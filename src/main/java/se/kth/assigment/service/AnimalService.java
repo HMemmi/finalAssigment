@@ -13,23 +13,27 @@ public interface AnimalService {
 	 * @return
 	 * 	this method returns a {@link List} of {@link Animal}
 	 * @throws FileNotFoundException
+	 * 			this method can throw {@link FileNotFoundException}
 	 * @throws IOException
+	 * 			this method can throw {@link IOException}
 	 */
 	List<Animal> getAllAnimals() throws FileNotFoundException, IOException;
 
 	/**
 	 * This method is to export csv file
 	 * @param animals
+	 * 		{@link List} of {@link Animal}
 	 * @param order
+	 * 			{@link Order}
 	 */
 	void exportToCSV(List<Animal> animals, Order order);
 
 	/**
 	 * This method is to send a collection to a server
 	 * @param animals
-	 * @param asc
+	 *   	list of {@link Animal}
+	 * @param order
+	 * 			{@link Order}
 	 */
 	void sendToServer(List<Animal> animals, Order order);
-
-
 }

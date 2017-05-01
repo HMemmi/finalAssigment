@@ -17,7 +17,7 @@ import com.google.common.collect.Lists;
 import se.kth.assigment.model.Animal;
 import se.kth.assigment.repository.AnimalRepository;
 /**
- *This class is a {@link AnimalServiceImplTest} which allow the user to read a csv file and bind them to animals
+ *This class is a {@link AnimalServiceImpl} which allow the user to read a csv file and bind them to animals
  * @author Hichem Memmi
  *@version 29/04/2017
  */

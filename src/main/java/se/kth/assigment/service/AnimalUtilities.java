@@ -3,6 +3,7 @@ package se.kth.assigment.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import org.springframework.stereotype.Service;
@@ -12,14 +13,18 @@ import se.kth.assigment.model.Animal;
 @Service("sortedList")
 public class AnimalUtilities implements SortedList {
 
+
 	/**
 	 * This method is to filter a collection of {@link Animal}
 	 * 
 	 * @param animals
+	 *            List of {@link Animal}
 	 * @param predicate
+	 *            a {@link Predicate}
 	 * @param consumer
-	 * @return It return a {@link List} of {@link Animal}
-	 */
+	 *            a {@link Consumer}
+	  */
+	
 	public static void filter(List<Animal> animals, Predicate<String> predicate, BiConsumer<Integer, Animal> consumer) {
 		int i = 0;
 		for (Animal animal : animals) {
@@ -43,8 +48,10 @@ public class AnimalUtilities implements SortedList {
 	 * This method is to filter Animals based on if they can swim
 	 * 
 	 * @param animals
+	 *            {@link List} of {@link Animal}
 	 * @param predicate
-	 * @return
+	 *            A {@link Predicate}
+	 * @return return {@link List} of {@link Animal}
 	 */
 	public static List<Animal> swimmersFilter(List<Animal> animals, Predicate<Animal> predicate) {
 		List<Animal> animalsToReturn = new ArrayList<>();
